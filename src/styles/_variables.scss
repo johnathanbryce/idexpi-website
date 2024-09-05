@@ -1,0 +1,69 @@
+$theme-prefix: idexpi- !default;
+
+// body color
+$body-color: #000000;
+$footer-bg-color: #000000;
+$footer-color: "";
+
+// background colors
+$bg-primary: #ffffff;
+$bg-secondary: #242424;
+
+// colors
+$primary: #292e7d !default;
+$secondary: #903a3e !default;
+
+// gaps
+$gap-values: (
+  "s": 0.5,
+  "m": 1,
+  "l": 1.5,
+  "xl": 2,
+) !default;
+
+// spacing
+$spacing-values: (
+  "n": 0,
+  "s": 0.25rem,
+  "m": 0.5rem,
+  "l": 1rem,
+  "xl": 1.5rem,
+) !default;
+
+// text align
+$text-alignment-values: (
+  "left": left,
+  "center": center,
+  "right": right,
+) !default;
+
+// width (looping over in _utils for custom flexible width classNames)
+$min-width: 1;
+$max-width: 100;
+$width-step: 1;
+
+// flex utility classnames map
+$flex-utilities: (
+  "d-flex": (
+    property: display,
+    value: flex,
+  ),
+  "justify-content-center": (
+    property: justify-content,
+    value: center,
+  ),
+  "align-items-center": (
+    property: align-items,
+    value: center,
+  ),
+  "flex-direction-row": (
+    property: flex-direction,
+    value: row,
+  ),
+  "flex-direction-column": (
+    property: flex-direction,
+    value: column,
+  ),
+) !default;
+
+$hover-transition: all 0.3s ease-in-out;

@@ -1,0 +1,123 @@
+@import "./variables";
+
+// loop  through flex-utilities to create classNames for flex properties
+@each $class, $utility in $flex-utilities {
+  .#{$class} {
+    #{map-get($utility, property)}: #{map-get($utility, value)} !important;
+  }
+}
+
+// generate width and max-width classes from 1to 100rem
+@for $i from $min-width through $max-width {
+  // width in remrem
+  .width-#{$i} {
+    width: #{$i}rem !important;
+  }
+  // max width in rem
+  .max-width-#{$i} {
+    max-width: #{$i}rem !important;
+  }
+  // width in %
+  .width-p-#{$i} {
+    width: #{$i}#{"%"} !important;
+  }
+}
+
+// generate padding classes
+@each $key, $value in $spacing-values {
+  .p-#{$key} {
+    padding: $value !important;
+  }
+  .pt-#{$key} {
+    padding-top: $value !important;
+  }
+  .pr-#{$key} {
+    padding-right: $value !important;
+  }
+  .pb-#{$key} {
+    padding-bottom: $value !important;
+  }
+  .pl-#{$key} {
+    padding-left: $value !important;
+  }
+}
+
+// generate margin classes
+@each $key, $value in $spacing-values {
+  .m-#{$key} {
+    margin: $value !important;
+  }
+  .mt-#{$key} {
+    margin-top: $value !important;
+  }
+  .mr-#{$key} {
+    margin-right: $value !important;
+  }
+  .mb-#{$key} {
+    margin-bottom: $value !important;
+  }
+  .ml-#{$key} {
+    margin-left: $value !important;
+  }
+}
+
+// generate text alignment classes
+@each $key, $value in $text-alignment-values {
+  .text-#{$key} {
+    text-align: $value !important;
+  }
+}
+
+// generate gaps
+@each $key, $value in $gap-values {
+  .gap-#{$key} {
+    gap: $value !important;
+  }
+}
+
+//color utilities
+.bg-primary {
+  background-color: $bg-primary !important;
+}
+
+.bg-secondary {
+  background-color: $bg-secondary !important;
+}
+
+.text-primary {
+  color: $body-color !important;
+}
+
+.text-secondary {
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+// hover:
+.hover-transition {
+  transition: $hover-transition;
+}
+
+// flexbox utils:
+.center-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.row-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.row-space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
